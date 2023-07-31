@@ -1,0 +1,18 @@
+cd \ 
+
+cd C:\Axway\Transfer_CFT\runtime
+call profile.bat
+
+C:
+
+cd C:\SIDSI\DATA\
+
+dir /b Export_ARTICLES_INTEGRES_V12.txt > D:\list\DEMAWB.txt
+ 
+
+CFTUTIL send PART=SIDIRCT,IDF=DEMAWB,FNAME='C:\SIDSI\DATA\Export_ARTICLES_INTEGRES_V12.txt',nfname='Export_ARTICLES_INTEGRES_V12.txt',flrecl=700
+
+
+pause
+
+exit
